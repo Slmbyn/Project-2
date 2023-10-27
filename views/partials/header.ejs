@@ -8,10 +8,18 @@
 </head>
 <body>
   <nav>
+    <a href="/">Home</a>
+    <a href="/vehicles">Browse</a>
     <% if (user) { %>
-      <a href="/logout">LOG OUT</a>
+      <a href="/vehicles/new">Sell</a>
+      <a href="/myCars">My Cars</a>
     <% } else { %>
-      <a href="/auth/google">LOG IN</a>
+      <a href="/auth/google">Login</a>
+    <% } %>
+    
+    <% if (user) { %>
+      <a href="/logout">Log Out</a>
+    
     <% } %>
   </nav>
   <main>
