@@ -13,14 +13,11 @@
     <% if (user) { %>
       <a href="/vehicles/new">Sell</a>
       <a href="/myCars">My Cars</a>
+      <a href="/logout">Log Out</a>
     <% } else { %>
       <a href="/auth/google">Login</a>
     <% } %>
-    
-    <% if (user) { %>
-      <a href="/logout">Log Out</a>
-    
-    <% } %>
+
   </nav>
   <main>
     <h1><%= title %></h1>

@@ -6,7 +6,7 @@ PushStart is a full-stack CRUD application that seamlessly connects car buyers &
 ![ERD](./erd.drawio.png)
 
 ## RESTful Routing Chart
-![RESTful Routes](./RESTfulChart.png)
+![RESTful Routes](./RESTful.png)
 
 
 ## Wireframes
