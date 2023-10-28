@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const Vehicle = require('./vehicle');
+
 const userSchema = new Schema({
   name: String,
   googleId: {
@@ -8,8 +10,12 @@ const userSchema = new Schema({
     required: true
   },
   email: String,
-  avatar: String
-}, {
+  avatar: String,
+  carsOwned: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Vehicle'
+  }]
+  }, {
   timestamps: true
 });
 
