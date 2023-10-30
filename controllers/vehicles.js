@@ -3,7 +3,7 @@ const User = require('../models/user');
 
 module.exports = {
     index,
-    show
+    show,
 }
     
 //function for 'browse' link in nav bar
@@ -30,3 +30,4 @@ async function show (req, res) {
         console.log(err)
     }
 }
+

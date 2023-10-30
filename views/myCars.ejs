@@ -26,7 +26,13 @@
           <td><%= c.color %></td>
           <td><%= c.forSale %></td>
           <td> <a href="/myCars/show"> Edit </a></td>
-          <td> <a href="/myCars"> 🚮</a></td>
+          <td> 
+            <form action="/myCars/<%= c._id %>?_method=DELETE" 
+                method="POST"
+                class="delete-form"
+                >
+                    <button type="submit">🚮</button>
+            </form>
         </tr>
       <% }); %>
       <% } else {%>

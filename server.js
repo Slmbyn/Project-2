@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+//adding method-override below logger
+const methodOverride = require('method-override');
 const session = require('express-session');
 const passport = require('passport');
 
@@ -44,9 +46,12 @@ app.use(function (req, res, next) {
   next();
 });
 
+//mounting methodoverride (changes some post request to delete or update)
+app.use(methodOverride('_method'));
+
 app.use('/', indexRouter);
 app.use('/vehicles', vehiclesRouter);
-app.use('/', myCarsRouter);
+app.use('/myCars', myCarsRouter);
 app.use('/', transactionsRouter)
 
 

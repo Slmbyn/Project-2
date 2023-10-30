@@ -13,7 +13,7 @@ router.get('/new', transactionsCtrlr.index)
 
 router.get('/:id', vehiclesCtrlr.show)
 
-//clicking 'submit' button on new.ejs
+//clicking 'submit' button to post a new car
 router.post('/', transactionsCtrlr.create)
 
 
