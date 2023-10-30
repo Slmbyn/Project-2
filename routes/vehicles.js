@@ -11,6 +11,8 @@ router.get('/', vehiclesCtrlr.index)
 //clicking 'sell' on nav bar
 router.get('/new', transactionsCtrlr.index)
 
+router.get('/:id', vehiclesCtrlr.show)
+
 //clicking 'submit' button on new.ejs
 router.post('/', transactionsCtrlr.create)
 

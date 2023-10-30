@@ -12,27 +12,22 @@
         <th>Color</th><br>
         <th>Description</th><br>
         <th>For Sale</th><br>
-        <th>Edit</th><br>
-        <th>Delete</th><br>
       </tr>
     </thead>
     <tbody>
-    <%if (carsOwned.length) {%>
-      <% carsOwned.forEach(function(c) { %>
+        
         <tr>
-          <td><%= c.year %></td>
-          <td><%= c.make %></td>
-          <td><%= c.model %></td>
-          <td><%= c.price %></td>
-          <td><%= c.color %></td>
-          <td><%= c.description %></td>
-          <td><%= c.forSale %></td>
-          <td> <a href="/show"> Edit </a></td>
-          <td> <a href="/myCars"> 🚮</a></td>
+          <td><%= carDetails.year %></td>
+          <td><%= carDetails.make %></td>
+          <td><%= carDetails.model %></td>
+          <td><%= carDetails.price %></td>
+          <td><%= carDetails.color %></td>
+          <td><%= carDetails.description %></td>
+          <td><%= carDetails.forSale %></td>
+          <%if (carDetails.owner === userId) {%>
+            <td> <a href="/myCars/show"> Edit </a></td>
+            <td> <a href="/myCars"> 🚮</a></td>
+          <% } %>
         </tr>
-      <% }); %>
-      <% } else {%>
-        <h3>No Cars Yet</h3>
-      <% } %>
     </tbody>
   </table>

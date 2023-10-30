@@ -9,7 +9,8 @@ module.exports = {
 
 //'sell' on nav bar (routes from vehicles router)
 async function index(req, res) {
-    res.render('../views/vehiclesfolder/new');
+    const ownerId = req.user._id
+    res.render('../views/vehiclesfolder/new', {ownerId});
 }
 
 //'submit' button on new car form
