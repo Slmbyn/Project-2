@@ -4,11 +4,10 @@
 
 <% if (!user) { %>
 	<p>please login to continue</p>
-<% } else { %>
-	<p>Welcome, <%= user.name %> <%= user.email %></p>
-	<% if (user.avatar) { %>
-		<img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar" />
-	<% } %>
 <% } %>
+
+
+<img class="logo" src="../images/pushstartlogo.png" alt="">
+<img class="backgroundimg" src="../lofiwireframe-browse-Small.jpeg" alt="">
 
 <%- include('./partials/footer') %>

@@ -12,6 +12,12 @@
         <th>Color</th><br>
         <th>Description</th><br>
         <th>For Sale</th><br>
+        <%if (carDetails.owner?.toString() === userId?.toString()) {%>
+            <th>Edit</th>
+            <th>Delete</th>
+          <% } else{ %>
+            <th> Buy </th>
+          <% } %>
       </tr>
     </thead>
     <tbody>
@@ -24,10 +30,12 @@
           <td><%= carDetails.color %></td>
           <td><%= carDetails.description %></td>
           <td><%= carDetails.forSale %></td>
-          <%if (carDetails.owner === userId) {%>
+          <%if (carDetails.owner?.toString() === userId?.toString()) {%>
             <td> <a href="/myCars/show"> Edit </a></td>
             <td> <a href="/myCars"> 🚮</a></td>
-          <% } %>
+            <% } else { %>
+                <td> <a href="/payment"> Buy</a></td>
+            <% } %>
         </tr>
     </tbody>
   </table>

@@ -24,7 +24,7 @@ async function show (req, res) {
     if (req.user) {
       userId = req.user._id  
     }
-    console.log(carDetails.owner, userId)
+    console.log(carDetails.owner.toString(), userId)
     res.render('vehiclesfolder/show', {carDetails, userId})
     } catch (err) {
         console.log(err)
