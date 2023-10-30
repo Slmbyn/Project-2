@@ -6,10 +6,13 @@ const vehiclesCtrlr = require('../controllers/vehicles')
 const transactionsCtrlr = require('../controllers/transactions')
 
 //clicking 'browse' on nav bar
-router.get('/vehicles', vehiclesCtrlr.index)
+router.get('/', vehiclesCtrlr.index)
 
 //clicking 'sell' on nav bar
-router.get('/vehicles/new', transactionsCtrlr.index)
+router.get('/new', transactionsCtrlr.index)
+
+//clicking 'submit' button on new.ejs
+router.post('/', transactionsCtrlr.create)
 
 
 

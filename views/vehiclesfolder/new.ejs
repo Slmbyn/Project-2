@@ -1,7 +1,28 @@
 <%- include('../partials/header') %>
 
-<form action="">
-    <p>Form to add a car goes here</p>
+<form action="/vehicles" method="POST">
+    <h3>Enter Vehicle Information</h3>
+    <label for="image">Upload Image:
+        <input type="text" name="image">
+    </label><br>
+    <label>Year
+        <input type="number" name="year">
+    </label><br>
+    <label>Make
+        <input type="string" name="make">
+    </label><br>
+    <label>Model
+        <input type="string" name="model">
+    </label><br>
+    <label>Color
+        <input type="string" name="color">
+    </label><br>
+    <label>Description
+        <input type="string" name="description">
+    </label><br>
+    <label>Price
+        <input type="number" name="price">
+    </label><br>
+    <button type="submit"> Post Car </button>
 </form>
 
-<button type="submit"> Post Car </button>

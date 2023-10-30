@@ -1,3 +1,38 @@
 <%- include('./partials/header') %>
 
 <h1>view cars that you own here</h1>
+
+<table>
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Description</th>
+        <th>For Sale</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+    <%if (carsOwned.length) {%>
+      <% carsOwned.forEach(function(c) { %>
+        <tr>
+          <td><%= c.year %></td>
+          <td><%= c.make %></td>
+          <td><%= c.model %></td>
+          <td><%= c.price %></td>
+          <td><%= c.color %></td>
+          <td><%= c.description %></td>
+          <td><%= c.forSale %></td>
+          <td> <a href="/myCars/show"> Edit </a></td>
+          <td> <a href="/myCars"> 🚮</a></td>
+        </tr>
+      <% }); %>
+      <% } else {%>
+        <h3>No Cars Yet</h3>
+      <% } %>
+    </tbody>
+  </table>

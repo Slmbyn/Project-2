@@ -5,6 +5,9 @@ module.exports = {
     index
 };
 
+//clicking 'my cars' in nav bar
 async function index(req, res) {
-    res.render('../views/myCars.ejs');
+    const user = await User.findById(req.user._id).populate('carsOwned');
+    const carsOwned = user.carsOwned;
+    res.render('../views/myCars.ejs', {carsOwned});
 }

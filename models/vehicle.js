@@ -12,6 +12,7 @@ const vehicleSchema = new Schema({
         type: Boolean,
         default: true
     },
+    image: String,
     year: Number,
     make: String,
     model: String,
