@@ -25,7 +25,7 @@
           <td><%= c.price %></td>
           <td><%= c.color %></td>
           <td> <a href="/vehicles/<%= c.id %>"> Details </a></td>
-          <td> <a href="/payment"> BUY </a></td>
+          <td> <a href="/payment/<%= c.id %>"> BUY </a></td>
         </tr>
       <% }); %>
       <% } else {%>

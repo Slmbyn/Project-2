@@ -31,8 +31,8 @@
           <td><%= carDetails.description %></td>
           <td><%= carDetails.forSale %></td>
           <%if (carDetails.owner?.toString() === userId?.toString()) {%>
-            <td> <a href="/myCars/show"> Edit </a></td>
-            <form action="/myCars/<%= c._id %>?_method=DELETE" method="POST">
+            <td> <a href="/myCars/<%=carDetails._id%>/edit"> Edit </a></td>
+            <form action="/myCars/<%= carDetails._id %>?_method=DELETE" method="POST">
                 <button type="submit">🚮</button>
             </form>
             <% } else { %>

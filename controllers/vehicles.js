@@ -20,11 +20,11 @@ async function show (req, res) {
     try {
     // console.log('show function is working')
     const carDetails = await Vehicle.findById(req.params.id);
+    console.log(carDetails)
     let userId
     if (req.user) {
       userId = req.user._id  
     }
-    console.log(carDetails.owner.toString(), userId)
     res.render('vehiclesfolder/show', {carDetails, userId})
     } catch (err) {
         console.log(err)

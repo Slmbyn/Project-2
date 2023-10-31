@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+<form action="/myCars/<%= carId.id %>?_method=PUT" method="POST">
+    <h3>Enter Vehicle Information</h3>
+    
+    <label for="image">Upload Image:
+        <input type="file" name="image" value="<%=carId.image%>">
+    </label><br>
+    <label>Year
+        <input type="number" name="year" value="<%=carId.year%>">
+    </label><br>
+    <label>Make
+        <input type="string" name="make" value="<%=carId.make%>">
+    </label><br>
+    <label>Model
+        <input type="string" name="model" value="<%=carId.model%>">
+    </label><br>
+    <label>Color
+        <input type="string" name="color" value="<%=carId.color%>">
+    </label><br>
+    <label>Description
+        <input type="string" name="description" value="<%=carId.description%>">
+    </label><br>
+    <label>Price
+        <input type="number" name="price" value="<%=carId.price%>">
+    </label><br>
+    <label>For Sale
+        <input type="boolean" name="forSale" value="<%=carId.forSale%>">
+    </label><br>
+    <button type="submit"> Update </button>
+</form>
+

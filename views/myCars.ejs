@@ -5,6 +5,7 @@
 <table>
     <thead>
       <tr>
+        <th>Image</th>
         <th>Year</th>
         <th>Make</th>
         <th>Model</th>
@@ -19,13 +20,14 @@
     <%if (carsOwned.length) {%>
       <% carsOwned.forEach(function(c) { %>
         <tr>
+          <td><%= c.image %></td>
           <td><%= c.year %></td>
           <td><%= c.make %></td>
           <td><%= c.model %></td>
           <td><%= c.price %></td>
           <td><%= c.color %></td>
           <td><%= c.forSale %></td>
-          <td> <a href="/myCars/show"> Edit </a></td>
+          <td> <a href="/myCars/<%=c._id%>/edit"> Edit </a></td>
           <td> 
             <form action="/myCars/<%= c._id %>?_method=DELETE" 
                 method="POST"
@@ -33,6 +35,7 @@
                 >
                     <button type="submit">🚮</button>
             </form>
+          </td>
         </tr>
       <% }); %>
       <% } else {%>
