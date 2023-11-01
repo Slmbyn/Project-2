@@ -1,42 +1,53 @@
-/* body { font-family: sans-serif; }
 
-.navbar nav { 
-    list-style:none; margin-top: 40px; 
-}
-.navbar nav li { 
-    display:inline; padding:0 10px; 
-}
-
-.navbar nav li a {
-  text-decoration: none;
-  padding-left: 25px;
-  text-transform: uppercase;
-  color: #333;
-	text-shadow: 1px 1px 1px #ccc;
+body {
+    background-image: url(https://www.motortrend.com/uploads/2022/03/2022-Honda-Civic-Touring-vs-2022-Hyundai-Elantra-Limited-vs-2022-Kia-Forte-GT-vs-2022-Mazda-Mazda3-Sedan-AWD-Turbo-vs-2022-Nissan-Sentra-SR-vs-2022-Volkswagen-Jetta-SEL-19.jpg);
+    background-color: rgba(45, 64, 73, 0.9);
+    background-size: cover;
+    display: grid;
+    grid-template-rows: .5fr 4fr;
+    height: 100vh;
+    font-family: 'Montserrat';
+    color: white;
+    background-blend-mode: multiply;
 }
 
-.navbar { 
-    background: no-repeat 0px -2px transparent; 
-    background-color: black;
-} */
-
-/* nav a { 
-    /* background:url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/home.gif") no-repeat 0px -2px transparent;  */
-    /* background-color: black; */
-/* } */
-
-/* * {
-    background: url(https://s.abcnews.com/images/Business/lincoln-online-buying-ht-jt-210324_1616685071990_hpMain_16x9_992.jpg?w=992);
-    background-color: rgba(45, 64, 73, 0.5); /* Change the alpha (opacity) value to control the tint intensity */
-} */
+.logo-wrapper {
+    grid-row: 2 / 3;
+    /* add the display: so the items inside can be moved around; */
+    display: flex;
+    /* center the nav links */
+    justify-content: center;
+}
 
 .logo {
-    height: 20%;
-    width: 20%;
+    height: 80%;
+    width: 80%;
+    align-self: center;
 }
 
-.navbar {
-    color: white !important;
+/* In order to adjust alignment of the nav links, i have to make adjustment to its parent (nav) */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1%;
+    /* max-height: ; */
 }
 
+a{
+    font-size: 110%;
+    margin: 1%;
+    text-decoration: none;
+    color: white;
+}
 
+a:hover {
+    /* text-decoration: underline; */
+    padding: 2px;
+    border: 3px solid white;
+    border-radius: 10%;
+    font-weight: bold;
+    transform: scale(1.1);
+    transition: transform 450ms ease-in-out;
+    cursor: pointer;
+    /* color: rgb(38, 204, 111); */
+}
