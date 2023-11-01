@@ -18,13 +18,13 @@
     <tbody>
         
         <tr>
-          <td><%= carDetails.image %></td>
-          <td><%= carDetails.year %></td>
-          <td><%= carDetails.make %></td>
-          <td><%= carDetails.model %></td>
-          <td><%= carDetails.color %></td>
-          <td><%= carDetails.price %></td>
-          <td><%= carDetails.description %></td>
+            <td><img src=<%= carDetails.image %> alt=""></td>
+            <td><%= carDetails.year %></td>
+            <td><%= carDetails.make %></td>
+            <td><%= carDetails.model %></td>
+            <td><%= carDetails.color %></td>
+            <td><%= carDetails.price %></td>
+            <td><%= carDetails.description %></td>
         </tr>
     </tbody>
   </table>
@@ -43,3 +43,5 @@
     </label><br>
     <button type="submit"> Confirm Purchase </button>
 </form>
+
+<%- include('../partials/footer') %>
