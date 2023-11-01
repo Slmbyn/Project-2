@@ -5,6 +5,7 @@
 <table>
     <thead>
       <tr>
+        <th>Image</th> <br>
         <th>Year</th> <br>
         <th>Make</th><br>
         <th>Model</th><br>
@@ -23,21 +24,22 @@
     <tbody>
         
         <tr>
-          <td><%= carDetails.year %></td>
-          <td><%= carDetails.make %></td>
-          <td><%= carDetails.model %></td>
-          <td><%= carDetails.price %></td>
-          <td><%= carDetails.color %></td>
-          <td><%= carDetails.description %></td>
-          <td><%= carDetails.forSale %></td>
-          <%if (carDetails.owner?.toString() === userId?.toString()) {%>
-            <td> <a href="/myCars/<%=carDetails._id%>/edit"> Edit </a></td>
-            <form action="/myCars/<%= carDetails._id %>?_method=DELETE" method="POST">
-                <button type="submit">🚮</button>
-            </form>
-            <% } else { %>
-                <td> <a href="/payment"> Buy</a></td>
-            <% } %>
+            <td><img src=<%= carDetails.image %> alt=""></td>
+            <td><%= carDetails.year %></td>
+            <td><%= carDetails.make %></td>
+            <td><%= carDetails.model %></td>
+            <td><%= carDetails.price %></td>
+            <td><%= carDetails.color %></td>
+            <td><%= carDetails.description %></td>
+            <td><%= carDetails.forSale %></td>
+            <%if (carDetails.owner?.toString() === userId?.toString()) {%>
+                <td> <a href="/myCars/<%=carDetails._id%>/edit"> Edit </a></td>
+                <form action="/myCars/<%= carDetails._id %>?_method=DELETE" method="POST">
+                    <button type="submit">🚮</button>
+                </form>
+                <% } else { %>
+                    <td> <a href="/payment"> Buy</a></td>
+                <% } %>
         </tr>
     </tbody>
   </table>

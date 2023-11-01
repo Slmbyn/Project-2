@@ -20,7 +20,7 @@
     <%if (carsOwned.length) {%>
       <% carsOwned.forEach(function(c) { %>
         <tr>
-          <td><%= c.image %></td>
+          <td><img src=<%= c.image %> alt=""></td>
           <td><%= c.year %></td>
           <td><%= c.make %></td>
           <td><%= c.model %></td>

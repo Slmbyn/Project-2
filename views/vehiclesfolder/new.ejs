@@ -3,8 +3,9 @@
 <form action="/vehicles" method="POST">
     <h3>Enter Vehicle Information</h3>
     <input type="hidden" name="owner" value=<%= ownerId %> >
+
     <label for="image">Upload Image:
-        <input type="file" name="image">
+        <input type="text" name="image">
     </label><br>
     <label>Year
         <input type="number" name="year">

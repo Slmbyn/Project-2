@@ -6,6 +6,7 @@
 <table>
     <thead>
       <tr>
+        <th>Image</th>
         <th>Year</th>
         <th>Make</th>
         <th>Model</th>
@@ -19,13 +20,14 @@
     <%if (vehicleList.length) {%>
       <% vehicleList.forEach(function(c) { %>
         <tr>
-          <td><%= c.year %></td>
-          <td><%= c.make %></td>
-          <td><%= c.model %></td>
-          <td><%= c.price %></td>
-          <td><%= c.color %></td>
-          <td> <a href="/vehicles/<%= c.id %>"> Details </a></td>
-          <td> <a href="/payment/<%= c.id %>"> BUY </a></td>
+            <td><img src=<%= c.image %> alt=""></td>
+            <td><%= c.year %></td>
+            <td><%= c.make %></td>
+            <td><%= c.model %></td>
+            <td><%= c.price %></td>
+            <td><%= c.color %></td>
+            <td> <a href="/vehicles/<%= c.id %>"> Details </a></td>
+            <td> <a href="/payment/<%= c.id %>"> BUY </a></td>
         </tr>
       <% }); %>
       <% } else {%>
