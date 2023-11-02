@@ -2,46 +2,43 @@
 <div class="title">
     <h1>Please Complete Your Purchase</h1>
 </div>
-<table>
-    <thead>
-      <tr>
-        <th>Image</th> <br>
-        <th>Year</th> <br>
-        <th>Make</th><br>
-        <th>Model</th><br>
-        <th>Color</th><br>
-        <th>Price</th><br>
-        <th>Description</th><br>
-        <th> Buy </th>
-      </tr>
-    </thead>
-    <tbody>
-        
-        <tr>
-            <td><img src=<%= carDetails.image %> alt=""></td>
-            <td><%= carDetails.year %></td>
-            <td><%= carDetails.make %></td>
-            <td><%= carDetails.model %></td>
-            <td><%= carDetails.color %></td>
-            <td><%= carDetails.price %></td>
-            <td><%= carDetails.description %></td>
-        </tr>
-    </tbody>
-  </table>
+<div class="show-main">
 
-  <form action="/payment/<%=carDetails.id%>?_method=PATCH" method="POST">
-    <h3>Enter Payment Information</h3>
-    <input type="hidden" value=<%= userId %> >
-    <label>Credit Card Number
-        <input type="number">
-    </label><br>
-    <label>Expiration
-        <input type="number">
-    </label><br>
-    <label>CCV
-        <input type="number">
-    </label><br>
-    <button type="submit"> Confirm Purchase </button>
-</form>
+    <div class="show-car-img-container">
+        <img class="show-car-img" src=<%= carDetails.image %> alt="">
+    </div>
 
+    <div class="car-info">
+        <div class="show-cartype">
+            <p class="show-year"><%= carDetails.year %></p>
+            <p class="show-make"><%= carDetails.make %></p>
+            <p class="show-model"><%= carDetails.model %></p>
+        </div>
+        <div class="price-color-description">
+            <p class="show-color"><b>Color:</b>&nbsp&nbsp<%= carDetails.color %></p><br>
+            <p class="show-price"><b>Price:</b>&nbsp&nbsp$<%= carDetails.price %></p><br>
+            <p class="show-description"><b>Description:</b> <br> <%= carDetails.description %></p>
+        </div>
+    </div>
+</div>
+
+<div class="payment-title">
+    <h2>Enter Payment Information</h2>
+</div>
+
+<div class="payment-form">
+    <form action="/payment/<%=carDetails.id%>?_method=PATCH" method="POST">
+        <input type="hidden" value=<%= userId %> >
+        <label>Credit Card Number
+            <input type="number">
+        </label><br>
+        <label>Expiration
+            <input type="number">
+        </label><br>
+        <label>CCV
+            <input type="number">
+        </label><br>
+        <button type="submit" class="confirm-purchase" > Confirm Purchase </button>
+    </form>
+</div>
 <%- include('../partials/footer') %>

@@ -1,0 +1,47 @@
+<%- include('../partials/header') %>
+<div class="title">
+    <h1>Please Complete Your Purchase</h1>
+</div>
+<table>
+    <thead>
+      <tr>
+        <th>Image</th> <br>
+        <th>Year</th> <br>
+        <th>Make</th><br>
+        <th>Model</th><br>
+        <th>Color</th><br>
+        <th>Price</th><br>
+        <th>Description</th><br>
+        <th> Buy </th>
+      </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td><img src=<%= carDetails.image %> alt=""></td>
+            <td><%= carDetails.year %></td>
+            <td><%= carDetails.make %></td>
+            <td><%= carDetails.model %></td>
+            <td><%= carDetails.color %></td>
+            <td><%= carDetails.price %></td>
+            <td><%= carDetails.description %></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <form action="/payment/<%=carDetails.id%>?_method=PATCH" method="POST">
+    <h3>Enter Payment Information</h3>
+    <input type="hidden" value=<%= userId %> >
+    <label>Credit Card Number
+        <input type="number">
+    </label><br>
+    <label>Expiration
+        <input type="number">
+    </label><br>
+    <label>CCV
+        <input type="number">
+    </label><br>
+    <button type="submit"> Confirm Purchase </button>
+</form>
+
+<%- include('../partials/footer') %>
