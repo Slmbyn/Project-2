@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
-
+<div class="title">
+    <h1>Edit Your Listing</h1>
+</div>
 <form action="/myCars/<%= carId.id %>?_method=PUT" method="POST">
-    <h3>Enter Vehicle Information</h3>
     
     <label for="image">Upload Image:
         <input type="text" name="image" value="<%=carId.image%>">

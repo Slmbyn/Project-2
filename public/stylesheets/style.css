@@ -141,22 +141,38 @@ p {
 }
 
 .details, .buy {
-    border: 1px solid white;
     font-size: 110%;
     margin: 1%;
     text-decoration: none;
     color: white;
-    padding: 3%;
+    padding: 5%;
     justify-self: space-around;
+    border-radius: 10%;
 }
 
 .buy {
     background-color: rgb(38, 204, 111);
 }
 
+.details{
+    border: 1px solid white;
+}
+
+.details:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+    transition: transform 250ms ease-in-out
+}
+.buy:hover {
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+
 /******************** show.ejs *************************************************/
 
-.show-main {
+/* .show-main {
     display: grid;
     grid-row: 1fr 3fr;
     grid-column: 1fr 1fr 1fr;
@@ -169,7 +185,6 @@ p {
     grid-area: 2 / 2 / 3 / 3;
     height: 15em;
     width: 15em;
-    /* display: flex; */
 }
 .edit-delete {
     grid-area: 2 / 3 / 3 / 4;
@@ -214,7 +229,69 @@ p {
     height: 2em;
     background-color: red;
     color: white;
+} */
+
+.show-main {
+    display: flex;
+    grid-row: 1fr 2fr 2fr;
+    grid-column: 1fr 2fr 1fr ;
+    font-size: 130%;
 }
+
+.show-car-img {
+    /* grid-area: 2 / 2 / 3 / 3; */
+    max-width: 35em;
+    max-height: 35em;
+    justify-self: center;
+}
+.car-info {
+    margin-left: 1%;
+    /* grid-area: 3 / 2 / 4 / 3; */
+    height: 15em;
+    width: 15em;
+    /* border-radius: 4%; */
+}
+.edit-delete {
+    /* grid-area: 3 / 2 / 4 / 3; */
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.show-edit{
+    border: 1px solid white;
+    font-size: 110%;
+    margin: 1%;
+    text-decoration: none;
+    color: white;
+    padding: 4%;
+    border-radius: 10%;
+}
+.show-edit:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+    transition: transform 250ms ease-in-out
+}
+.show-delete {
+    background-color: red;
+    margin-top: 40%;
+}
+
+.show-delete:hover {
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/* .show-buy {
+    font-size: 110%;
+    margin: 1%;
+    text-decoration: none;
+    color: white;
+    padding: 3%;
+    justify-self: space-around;
+    border-radius: 10%;
+} */
 
 /***************************** NEW CAR PAGE********************** */
 
@@ -247,3 +324,42 @@ input {
     width: 6.5em;
     margin-left: 2em;
 }
+
+/* mycars */
+
+.mycars-edit-delete {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mycars-edit, .mycars-delete {
+    border-radius: 10%;
+    font-size: 110%;
+    margin: 1%;
+    text-decoration: none;
+    color: white;
+    padding: 4%;
+    justify-self: space-around;
+}
+
+.mycars-edit{
+    border: 1px solid white;
+}
+.mycars-edit:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+    transition: transform 250ms ease-in-out
+}
+
+.mycars-delete {
+    background-color: red;
+}
+
+.mycars-delete:hover {
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+
