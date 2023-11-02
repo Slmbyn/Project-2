@@ -31,7 +31,7 @@ nav {
     /* text-decoration: underline; */
     /* padding: 2px;
     border: 1.5px solid rgb(234, 222, 222); */
-    color: rgb(234, 222, 222);
+    color: rgb(38, 204, 111);
     border-radius: 10%;
     font-weight: bold;
     transform: scale(1.1);
@@ -384,4 +384,12 @@ input {
     padding-top: 3em;
     padding-bottom: 3em;
     margin-left: 20%;
+}
+
+.updatecarbutton {
+    margin-left: 20%;
+}
+
+.postcar:hover {
+    cursor: pointer;
 }

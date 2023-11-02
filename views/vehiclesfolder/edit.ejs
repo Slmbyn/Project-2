@@ -2,33 +2,37 @@
 <div class="title">
     <h1>Edit Your Listing</h1>
 </div>
-<form action="/myCars/<%= carId.id %>?_method=PUT" method="POST">
-    
-    <label for="image">Upload Image:
-        <input type="text" name="image" value="<%=carId.image%>">
-    </label><br>
-    <label>Year
-        <input type="number" name="year" value="<%=carId.year%>">
-    </label><br>
-    <label>Make
-        <input type="string" name="make" value="<%=carId.make%>">
-    </label><br>
-    <label>Model
-        <input type="string" name="model" value="<%=carId.model%>">
-    </label><br>
-    <label>Color
-        <input type="string" name="color" value="<%=carId.color%>">
-    </label><br>
-    <label>Description
-        <input type="string" name="description" value="<%=carId.description%>">
-    </label><br>
-    <label>Price
-        <input type="number" name="price" value="<%=carId.price%>">
-    </label><br>
-    <label>For Sale
-        <input type="boolean" name="forSale" value="<%=carId.forSale%>">
-    </label><br>
-    <button type="submit"> Update </button>
-</form>
-
+<div class="formwrapper">
+    <div class="newcarform">
+        <form action="/myCars/<%= carId.id %>?_method=PUT" method="POST">
+            <label for="image">Upload Image:
+                <input type="text" name="image" value="<%=carId.image%>">
+            </label><br>
+            <label>Year
+                <input type="number" name="year" value="<%=carId.year%>">
+            </label><br>
+            <label>Make
+                <input type="string" name="make" value="<%=carId.make%>">
+            </label><br>
+            <label>Model
+                <input type="string" name="model" value="<%=carId.model%>">
+            </label><br>
+            <label>Color
+                <input type="string" name="color" value="<%=carId.color%>">
+            </label><br>
+            <label>Description
+                <input type="string" name="description" value="<%=carId.description%>">
+            </label><br>
+            <label>Price
+                <input type="number" name="price" value="<%=carId.price%>">
+            </label><br>
+            <label>For Sale
+                <input type="boolean" name="forSale" value="<%=carId.forSale%>">
+            </label><br>
+            <div class="updatecarbutton">
+                <button type="submit" class="postcar" > Update </button>
+            </div>
+        </form>
+    </div>
+</div>
 <%- include('../partials/footer') %>

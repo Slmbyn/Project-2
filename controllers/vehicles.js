@@ -10,6 +10,14 @@ module.exports = {
 async function index (req, res) {
     try { 
     const vehicleList = await Vehicle.find({});
+    //get current user
+    // const currentUser = await User.findById(req.user._id)
+    // console.log('THE CURRENT USER IS:', {currentUser})
+    //get car owner
+    // const carOwner = await vehicleList.owner;
+    // console.log('THE OWNER IS', {carOwner})
+    // const isForSale = await vehicleList.forSale;
+    // console.log('IS IT FOR SALE:' , {isForSale})
     res.render('vehiclesfolder/vehicles', {vehicleList});
     } catch (err) {
         console.log(err)
