@@ -4,44 +4,36 @@
     <h1>Car's details</h1>
 </div>
 
-<table>
-    <thead>
-      <tr>
-        <th>Image</th> <br>
-        <th>Year</th> <br>
-        <th>Make</th><br>
-        <th>Model</th><br>
-        <th>Price</th><br>
-        <th>Color</th><br>
-        <th>Description</th><br>
-        <%if (carDetails.owner?.toString() === userId?.toString()) {%>
-            <th>Edit</th>
-            <th>Delete</th>
-          <% } else{ %>
-            <th> Buy </th>
-          <% } %>
-      </tr>
-    </thead>
-    <tbody>
-        
-        <tr>
-            <td><img src=<%= carDetails.image %> alt=""></td>
-            <td><%= carDetails.year %></td>
-            <td><%= carDetails.make %></td>
-            <td><%= carDetails.model %></td>
-            <td><%= carDetails.price %></td>
-            <td><%= carDetails.color %></td>
-            <td><%= carDetails.description %></td>
-            <%if (carDetails.owner?.toString() === userId?.toString()) {%>
-                <td> <a href="/myCars/<%=carDetails._id%>/edit"> Edit </a></td>
-                <form action="/myCars/<%= carDetails._id %>?_method=DELETE" method="POST">
-                    <button type="submit">🚮</button>
-                </form>
-                <% } else { %>
-                    <td> <a href="/payment"> Buy</a></td>
-                <% } %>
-        </tr>
-    </tbody>
-  </table>
+<div class="show-main">
+
+    <div class="show-car-img-container">
+        <p><img class="show-car-img" src=<%= carDetails.image %> alt=""></p>
+    </div>
+
+    <div class="car-info">
+        <div class="show-cartype">
+            <p class="show-year"><%= carDetails.year %></p>
+            <p class="show-make"><%= carDetails.make %></p>
+            <p class="show-model"><%= carDetails.model %></p>
+        </div>
+        <div class="price-color-description">
+            <p class="show-color"><%= carDetails.color %></p>
+            <p class="show-price">$<%= carDetails.price %></p>
+            <p class="show-description"><%= carDetails.description %></p>
+        </div>
+    </div>
+    <%if (carDetails.owner?.toString() === userId?.toString()) {%>
+        <div class="edit-delete">
+            <p> <a href="/myCars/<%=carDetails._id%>/edit" class="show-edit"> Edit </a></p>
+            <form action="/myCars/<%= carDetails._id %>?_method=DELETE" method="POST" class="show-delete">
+                <button type="submit">🚮</button>
+            </form>
+        </div>
+        <% } else { %>
+            <div class="show-buy">
+                <p> <a href="/payment"> Buy</a></p>
+            </div>
+        <% } %>
+</div>
 
   <%- include('../partials/footer') %>

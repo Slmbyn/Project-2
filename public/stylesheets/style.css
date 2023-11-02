@@ -5,7 +5,7 @@ body {
     background-size: cover;
     display: grid;
     grid-template-rows: .5fr 4fr;
-    height: 100vh;
+    height: 100%;
     font-family: 'Montserrat';
     color: white;
     background-blend-mode: multiply;
@@ -152,4 +152,51 @@ p {
 
 .buy {
     background-color: rgb(38, 204, 111);
+}
+
+/* show.ejs */
+
+.show-main {
+    display: grid;
+    grid-row: 1fr 3fr;
+    grid-column: 1fr 1fr 1fr;
+}
+
+.show-car-img-container {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.car-info {
+    grid-area: 2 / 2 / 3 / 3;
+    /* display: flex; */
+}
+.edit-delete {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.show-buy {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.show-cartype {
+    display: inline-block;
+}
+
+.show-car-img {
+    height: 35%;
+    width: 35%;
+}
+
+.show-edit, .show-delete {
+    border: 1px solid white;
+    font-size: 110%;
+    margin: 1%;
+    text-decoration: none;
+    color: white;
+    padding: 3%;
+}
+
+.price-color-description {
+    display: flex;
+    flex-direction: column;
+
 }
