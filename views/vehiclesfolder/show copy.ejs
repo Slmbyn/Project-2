@@ -1,8 +1,6 @@
 <%- include('../partials/header') %>
 
-<div class="title">
-    <h1>Car's details</h1>
-</div>
+<h1>Car's details</h1>
 
 <table>
     <thead>
@@ -14,6 +12,7 @@
         <th>Price</th><br>
         <th>Color</th><br>
         <th>Description</th><br>
+        <th>For Sale</th><br>
         <%if (carDetails.owner?.toString() === userId?.toString()) {%>
             <th>Edit</th>
             <th>Delete</th>
@@ -32,6 +31,7 @@
             <td><%= carDetails.price %></td>
             <td><%= carDetails.color %></td>
             <td><%= carDetails.description %></td>
+            <td><%= carDetails.forSale %></td>
             <%if (carDetails.owner?.toString() === userId?.toString()) {%>
                 <td> <a href="/myCars/<%=carDetails._id%>/edit"> Edit </a></td>
                 <form action="/myCars/<%= carDetails._id %>?_method=DELETE" method="POST">

@@ -55,21 +55,38 @@ nav {
     margin-top: -20px;
 }
 
-/* h1 {
-    align-self: center;
-} */
+h1 {
+    font-size: 350%;
+}
 
-/* main {
+.title {
     display: flex;
-    /* gap: 10px 10px; */
-    /* justify-content: space-evenly; */
-/* }  */
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+main {
+    margin-left: 8em;
+    margin-right: 8em;
+ } 
 
 .card-container {
     /* display: flex; */
     flex-wrap: wrap;
-    display: inline-block;
+    display: flex;
     /* justify-items: space-around; */
+    /* max-width: 30%;
+    max-height: 50%;
+    min-width: 30%;
+    min-height: 50%; */
+    /* margin-left: 20%; */
+    /* margin-right: 10em; */
+    /* justify-content: space-between; */
+    gap: 3em 3em;
+    /* width: 56em; */
+    /* height: 80vh; */
+    /* margin-top: 5em; */
 }
 
 .card {
@@ -78,6 +95,9 @@ nav {
     border: 1.5px solid white;
     display: inline-block;
     border-radius: 6px;
+    background-color: rgba(20, 20, 20, 0.75);
+    max-width: 15em;
+    max-height: 30em;
 }
 
 .card:hover {
@@ -93,11 +113,27 @@ nav {
 .container {
     padding:2px 16px;
     /* display: flex; */
+    font-size: 120%;
+}
+
+.detailsbuy {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: self-end; */
+}
+
+.cartype {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .carimg {
     height: 15em;
     width: 15em;
+}
+
+.year, .make, .model, .price {
+    margin: .2em;
 }
 
 p {

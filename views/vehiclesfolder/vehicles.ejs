@@ -1,25 +1,29 @@
 <%- include('../partials/header') %>
-
-<h1>Find Your Next Car</h1>
-
+<div class="title">
+  <h1>Find Your Next Car</h1>
+</div>
     <%if (vehicleList.length) {%>
-      <% vehicleList.forEach(function(c) { %>
-          <div class="card-container">
+      <div class="card-container">
+          <% vehicleList.forEach(function(c) { %>
             <div class="card">
                 <div class="carimg-container">
                   <img class="carimg" src="<%= c.image %>" alt="">
                 </div>
                 <div class="container">
                     <p class="year"><%= c.year %></p>
-                    <p class="make"><%= c.make %></p>
-                    <p class="model"><%= c.model %></p><br>
-                    <p class="price"><%= c.price %></p><br>
-                    <p > <a href="/vehicles/<%= c.id %>" class="details"> Details </a></p>
-                    <p > <a href="/payment/<%= c.id %>" class="buy"> BUY </a></p>
+                    <div class="cartype">
+                      <p class="make"><%= c.make %></p>
+                      <p class="model"><%= c.model %></p><br>
+                    </div>
+                    <p class="price">$<%= c.price %></p><br>
+                    <div class="detailsbuy">
+                      <p > <a href="/vehicles/<%= c.id %>" class="details"> Details </a></p>
+                      <p > <a href="/payment/<%= c.id %>" class="buy"> BUY </a></p>
+                    </div>
                 </div>
               </div>
-          </div>
-      <% }); %>
+          <% }); %>
+      </div>
       <% } else {%>
         <h3>No Cars Yet</h3>
       <% } %>
