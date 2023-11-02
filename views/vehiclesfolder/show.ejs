@@ -7,7 +7,7 @@
 <div class="show-main">
 
     <div class="show-car-img-container">
-        <p><img class="show-car-img" src=<%= carDetails.image %> alt=""></p>
+        <img class="show-car-img" src=<%= carDetails.image %> alt="">
     </div>
 
     <div class="car-info">
@@ -19,14 +19,14 @@
         <div class="price-color-description">
             <p class="show-color"><%= carDetails.color %></p>
             <p class="show-price">$<%= carDetails.price %></p>
-            <p class="show-description"><%= carDetails.description %></p>
+            <p class="show-description"><b>Description:</b> <br> <%= carDetails.description %></p>
         </div>
     </div>
     <%if (carDetails.owner?.toString() === userId?.toString()) {%>
         <div class="edit-delete">
             <p> <a href="/myCars/<%=carDetails._id%>/edit" class="show-edit"> Edit </a></p>
             <form action="/myCars/<%= carDetails._id %>?_method=DELETE" method="POST" class="show-delete">
-                <button type="submit">🚮</button>
+                <button type="submit" class="show-delete">Delete</button>
             </form>
         </div>
         <% } else { %>

@@ -1,31 +1,37 @@
 <%- include('../partials/header') %>
 
-<form action="/vehicles" method="POST">
-    <h3>Enter Vehicle Information</h3>
-    <input type="hidden" name="owner" value=<%= ownerId %> >
+<div class="title">
+<h1>Enter Vehicle Information</h1>
+</div>
 
-    <label for="image">Upload Image:
-        <input type="text" name="image">
-    </label><br>
-    <label>Year
-        <input type="number" name="year">
-    </label><br>
-    <label>Make
-        <input type="string" name="make">
-    </label><br>
-    <label>Model
-        <input type="string" name="model">
-    </label><br>
-    <label>Color
-        <input type="string" name="color">
-    </label><br>
-    <label>Description
-        <input type="string" name="description">
-    </label><br>
-    <label>Price
-        <input type="number" name="price">
-    </label><br>
-    <button type="submit"> Post Car </button>
-</form>
+<div class="formwrapper">
+    <div class="newcarform">
+        <form action="/vehicles" method="POST">
+            <input type="hidden" name="owner" value=<%= ownerId %> >
 
+            <label for="image">Upload Image: <br>
+                <input type="text" name="image" placeholder="Image URL">
+            </label><br>
+            <label>Year<br>
+                <input type="number" name="year" placeholder="">
+            </label><br>
+            <label>Make<br>
+                <input type="string" name="make" placeholder="">
+            </label><br>
+            <label>Model<br>
+                <input type="string" name="model" placeholder="">
+            </label><br>
+            <label>Color<br>
+                <input type="string" name="color" placeholder="">
+            </label><br>
+            <label>Description<br>
+                <input type="string" name="description" placeholder="">
+            </label><br>
+            <label>Price<br>
+                <input type="number" name="price" placeholder="">
+            </label><br>
+            <button type="submit" class="postcar"> Post Car </button>
+        </form>
+    </div>
+</div>
 <%- include('../partials/footer') %>

@@ -154,7 +154,7 @@ p {
     background-color: rgb(38, 204, 111);
 }
 
-/* show.ejs */
+/******************** show.ejs *************************************************/
 
 .show-main {
     display: grid;
@@ -167,6 +167,8 @@ p {
 }
 .car-info {
     grid-area: 2 / 2 / 3 / 3;
+    height: 15em;
+    width: 15em;
     /* display: flex; */
 }
 .edit-delete {
@@ -186,7 +188,7 @@ p {
     width: 35%;
 }
 
-.show-edit, .show-delete {
+.show-edit {
     border: 1px solid white;
     font-size: 110%;
     margin: 1%;
@@ -198,5 +200,50 @@ p {
 .price-color-description {
     display: flex;
     flex-direction: column;
+}
 
+.show-color, .show-price, .show-cartype {
+    margin-top: -.5em;
+}
+.show-description {
+    margin-top: -.15em;
+}
+
+.show-delete {
+    width: 4em;
+    height: 2em;
+    background-color: red;
+    color: white;
+}
+
+/***************************** NEW CAR PAGE********************** */
+
+.formwrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.newcarform {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    font-size: 130%;
+    background-color: rgba(0, 0, 0, .65);
+    background-blend-mode: multiply;
+    /* background-color: black; */
+    max-width: 90em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+input {
+    margin-bottom: .6em;
+}
+
+.postcar {
+    justify-self: center;
+    margin-top: 1em;
+    height: 2.5em;
+    width: 6.5em;
+    margin-left: 2em;
 }
