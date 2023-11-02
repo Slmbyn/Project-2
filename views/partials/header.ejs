@@ -12,14 +12,14 @@
   <body>
       <div class="navbar">
         <nav>
-          <a href="/">Home</a>
-          <a href="/vehicles">Browse</a>
+          <a href="/" class="navlink">Home</a>
+          <a href="/vehicles" class="navlink">Browse</a>
           <% if (user) { %>
-            <a href="/vehicles/new">Sell</a>
-            <a href="/myCars">My Cars</a>
-            <a href="/logout">Log Out</a>
+            <a href="/vehicles/new" class="navlink">Sell</a>
+            <a href="/myCars" class="navlink">My Cars</a>
+            <a href="/logout" class="navlink">Log Out</a>
           <% } else { %>
-            <a href="/auth/google">Login</a>
+            <a href="/auth/google" class="navlink">Login</a>
           <% } %>
         </nav>
       </div>

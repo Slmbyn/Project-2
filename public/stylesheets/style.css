@@ -9,6 +9,35 @@ body {
     font-family: 'Montserrat';
     color: white;
     background-blend-mode: multiply;
+    /* justify-content: space-evenly; */
+}
+
+/* In order to adjust alignment of the nav links, i have to make adjustment to its parent (nav) */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1%;
+    /* max-height: ; */
+}
+
+.navlink{
+    font-size: 110%;
+    margin: 1%;
+    text-decoration: none;
+    color: white;
+}
+
+.navlink:hover {
+    /* text-decoration: underline; */
+    /* padding: 2px;
+    border: 1.5px solid rgb(234, 222, 222); */
+    color: rgb(234, 222, 222);
+    border-radius: 10%;
+    font-weight: bold;
+    transform: scale(1.1);
+    transition: transform 250ms ease-in-out;
+    cursor: pointer;
+    /* color: rgb(38, 204, 111); */
 }
 
 .logo-wrapper {
@@ -26,30 +55,65 @@ body {
     margin-top: -20px;
 }
 
-/* In order to adjust alignment of the nav links, i have to make adjustment to its parent (nav) */
-nav {
+/* h1 {
+    align-self: center;
+} */
+
+/* main {
     display: flex;
-    justify-content: flex-end;
-    padding: 1%;
-    /* max-height: ; */
+    /* gap: 10px 10px; */
+    /* justify-content: space-evenly; */
+/* }  */
+
+.card-container {
+    /* display: flex; */
+    flex-wrap: wrap;
+    display: inline-block;
+    /* justify-items: space-around; */
 }
 
-a{
+.card {
+    box-shadow: 0 6px 10px 0 rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+    border: 1.5px solid white;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.75);
+}
+
+.carimg-container {
+    /* border: 2px solid orange; */
+    height: 15em;
+    width: 15em;
+}
+
+.container {
+    padding:2px 16px;
+    /* display: flex; */
+}
+
+.carimg {
+    height: 15em;
+    width: 15em;
+}
+
+p {
+    display: inline-block;
+}
+
+.details, .buy {
+    border: 1px solid white;
     font-size: 110%;
     margin: 1%;
     text-decoration: none;
     color: white;
+    padding: 3%;
+    justify-self: space-around;
 }
 
-a:hover {
-    /* text-decoration: underline; */
-    /* padding: 2px;
-    border: 1.5px solid rgb(234, 222, 222); */
-    color: rgb(234, 222, 222);
-    border-radius: 10%;
-    font-weight: bold;
-    transform: scale(1.1);
-    transition: transform 250ms ease-in-out;
-    cursor: pointer;
-    /* color: rgb(38, 204, 111); */
+.buy {
+    background-color: rgb(38, 204, 111);
 }

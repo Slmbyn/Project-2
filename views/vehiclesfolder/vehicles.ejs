@@ -1,42 +1,28 @@
 <%- include('../partials/header') %>
 
-<h1>See all cars here</h1>
-
-
-<table>
-    <thead>
-      <tr>
-        <th>Image</th>
-        <th>Year</th>
-        <th>Make</th>
-        <th>Model</th>
-        <th>Price</th>
-        <th>Color</th>
-        <th>Details</th>
-        <th>Buy</th>
-      </tr>
-    </thead>
-    <tbody>
+<h1>Find Your Next Car</h1>
 
     <%if (vehicleList.length) {%>
       <% vehicleList.forEach(function(c) { %>
-        <div class="card">
-            <img src=<%= c.image %> alt="">
-            <div class="container">
-                <p class="year"><%= c.year %></p>
-                <p class="make"><%= c.make %></p>
-                <p class="model"><%= c.model %></p>
-                <p class="price"><%= c.price %></p>
-                <p class="color"><%= c.color %></p>
-                <p class="details"> <a href="/vehicles/<%= c.id %>"> Details </a></p>
-                <p class="buy"> <a href="/payment/<%= c.id %>"> BUY </a></p>
-            </div>
+          <div class="card-container">
+            <div class="card">
+                <div class="carimg-container">
+                  <img class="carimg" src="<%= c.image %>" alt="">
+                </div>
+                <div class="container">
+                    <p class="year"><%= c.year %></p>
+                    <p class="make"><%= c.make %></p>
+                    <p class="model"><%= c.model %></p><br>
+                    <p class="price"><%= c.price %></p><br>
+                    <p > <a href="/vehicles/<%= c.id %>" class="details"> Details </a></p>
+                    <p > <a href="/payment/<%= c.id %>" class="buy"> BUY </a></p>
+                </div>
+              </div>
           </div>
       <% }); %>
       <% } else {%>
         <h3>No Cars Yet</h3>
       <% } %>
-    </tbody>
-  </table>
+
 
   <%- include('../partials/footer') %>
