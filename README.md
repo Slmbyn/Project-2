@@ -1,3 +1,5 @@
+![ERD](./PushStart.png)
+
 # PushStart
 ```
 PushStart is a full-stack CRUD application that seamlessly connects car buyers & sellers.
